@@ -1,0 +1,14 @@
+%center  
+  %h1 Listing users
+  - if @users.any?
+    %table{border: "1"}
+      %tr
+        %th Name
+        %th Email
+        %th Permission
+      = render @users
+  - else
+    %em No Hay ningun user agregado
+            
+    %br
+      = link_to 'New User', new_user_path

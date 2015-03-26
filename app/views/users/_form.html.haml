@@ -1,0 +1,30 @@
+%center 
+  = form_for(@user) do |f|
+    .field
+      = f.label :name
+      %br
+        = f.text_field :name
+    .field
+      = f.label :email
+      %br
+        = f.text_field :email
+    .field
+      = f.label :Password
+      %br
+        = f.password_field :password
+    .field
+      = f.label :password_confirmation
+      %br
+        = f.password_field :password_confirmation
+        %br
+        
+    .field
+    = f.label :permission, "Permission"
+    = f.select :permission, ["admin","type1","type2"]
+    %br
+    .field
+    = f.label :phone, "Phone"
+    = f.number_field :phone
+    %br
+    .actions
+      = f.submit
