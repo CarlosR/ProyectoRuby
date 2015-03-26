@@ -2,14 +2,24 @@ Proyecto::Application.routes.draw do
 
   resources :users
   resources :companies
-  resources :priorities
-  resources :dimentions
+  resources :priorities do
+    #delete 'delete'  => 'priorities#destroy', on: :member
+    get 'delete'  => 'priorities#destroy', on: :member
+  end
+
+  resources :dimentions do
+    get 'delete'  => 'dimentions#destroy', on: :member
+  end
+  resources :factors
+  
   
   root "welcome#index"
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

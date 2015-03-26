@@ -1,18 +1,18 @@
-- if dimentions.any?
-  %h2 Dimensiones
+- if factors.any?
+  %h2 Factores
 
   %table{border:"1"}
     %tr
       %th Titulo
       %th Peso
 
-    = render dimentions
+    = render factors
     %tr
 
   %br
   %br
 - else
-  %em Aun no tiene Dimensiones
+  %em Aun no tiene Factores
   %br
   %br
   %br
