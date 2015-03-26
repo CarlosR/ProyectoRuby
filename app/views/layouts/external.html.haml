@@ -17,61 +17,58 @@
         %nav
           %ul#nav.sf-menu
             %li.selected
-              %a{:href => "home"} Home
+              = link_to 'Home', root_path
             %li
               %a{:href => ""} Resultados
-            %li
-              %a{:href => "#"} Administración
-              %ul
-                %li
-                  %a{:href => "users"} Usuarios
-                %li
-                  %a{:href => "companies"} Empresas
-                %li
-                  =link_to 'Prioridades', priorities_path
-                %li
-                  =link_to 'Dimensiones', dimentions_path
-                %li
-                  %a{:href => "#"} Factores
-                %li
-                  %a{:href => "#"} Tipos AMT
-                %li
-                  %a{:href => "#"} Metodologías
-                %li
-                  %a{:href => "#"} Tecnologías
-                %li
-                  %a{:href => "#"} Encuestas
-              - if !logged_in?
-                %li
-                  = link_to 'Login', login_path
-              - if logged_in?
-                %li
-                  = link_to 'Mi Perfil', user_path(current_user)
-                %li
-                  = link_to 'Logout', logout_path, method: :delete
+            - if !logged_in?
+              %li
+                %a{:href => "#"} Administración
+                %ul
+                  %li
+                    %a{:href => "users"} Usuarios
+                  %li
+                    %a{:href => "companies"} Empresas
+                  %li
+                    =link_to 'Prioridades', priorities_path
+                  %li
+                    =link_to 'Dimensiones', dimentions_path
+                  %li
+                    %a{:href => "#"} Factores
+                  %li
+                    %a{:href => "#"} Tipos AMT
+                  %li
+                    %a{:href => "#"} Metodologías
+                  %li
+                    %a{:href => "#"} Tecnologías
+                  %li
+                    %a{:href => "#"} Encuestas
+              %li
+                = link_to 'Logout', logout_path, method: :delete
+              %li
+                = link_to 'Mi Perfil', user_path(current_user)
+            - if logged_in?
+              %li
+                = link_to 'Login', login_path            
       #site_content
         #sidebar_container
           .gallery
             %ul.images
               %li.show
-                %img{:alt => "photo_one", :height => "450", :src => "assets/1.jpg", :width => "450"}/
+                %img{:alt => "photo_one", :height => "450", :src => "assets/img1.jpg", :width => "450"}/
               %li
-                %img{:alt => "photo_two", :height => "450", :src => "assets/2.jpg", :width => "450"}/
+                %img{:alt => "photo_two", :height => "450", :src => "assets/img2.jpg", :width => "450"}/
               %li
-                %img{:alt => "photo_three", :height => "450", :src => "assets/3.jpg", :width => "450"}/
+                %img{:alt => "photo_three", :height => "450", :src => "assets/img3.jpg", :width => "450"}/
               %li
-                %img{:alt => "photo_four", :height => "450", :src => "assets/4.jpg", :width => "450"}/
-              %li
-                %img{:alt => "photo_five", :height => "450", :src => "assets/5.jpg", :width => "450"}/
+                %img{:alt => "photo_four", :height => "450", :src => "assets/img4.jpg", :width => "450"}/
         #content
           %h1 AQUI IRIA EL LOGIN
           %p
-            This standards compliant, fixed width website template is released as an 'open source' design (under a
-            = succeed ")," do
-              %a{:href => "http://creativecommons.org/licenses/by/3.0"} Creative Commons Attribution 3.0 Licence
-            which means that you are free to use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from css3templates.co.uk' link in the footer of the template. All of the photos were taken by me - use as you wish.
-          %h3 Browser Compatibility
-          %p This template has been tested in the following browsers:
+        La manufactura en su sentido más amplio es el proceso de convertir materias primas en productos. Comprende: el diseño del producto, la selección de materias primas, y la secuencia de procesos a través de los cuales se fabricará el producto.
+
+        La Manufactura Avanzada incluye además, procesos de tecnología y el desarrollo de los procesos que complementen la cadena productiva.
+
+        SETD apoya la competitividad de la industria manufacturera mediante tecnologías que permitan una mayor velocidad y precisión de proceso, nuevas metodologías para procesar materiales, técnicas que reducen los tiempos de desarrollo de productos, así como la automatización de procesos productivos.
     %p &nbsp;
     / javascript at the bottom for fast page loading
     %script{:src => "js/jquery.js", :type => "text/javascript"}
