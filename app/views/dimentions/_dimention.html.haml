@@ -1,0 +1,5 @@
+%tr
+  %td prioridad 
+  /%td=dimention.get_priority(dimention.priority_id)
+  %td= link_to dimention.title, dimention_path(dimention.id)
+  %td= dimention.weight

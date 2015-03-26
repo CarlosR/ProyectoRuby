@@ -3,4 +3,9 @@ class Dimention < ActiveRecord::Base
   validates :title, presence: true
   validates :weight, presence: true
   has_many :factors
+
+  def get_priority(id)
+      @dimention = Dimention.find(id)
+      @dimention.title
+  end
 end

@@ -1,0 +1,11 @@
+%h2 Dimensiones
+=link_to "Agregar Dimension", new_dimention_path
+%br
+%br
+- if @dimentions.any?
+  = render partial: "shared/filter_form", locals: {form_path: dimentions_path}
+
+  .js_filtered_table
+    = render partial: "table", locals: {dimentions: @dimentions}
+- else
+  %em No Hay ninguna Dimension agregada

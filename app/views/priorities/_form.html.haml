@@ -1,0 +1,11 @@
+= form_for(@priority) do |f|
+  .field
+    = f.label :title
+    %br
+      = f.text_field :title
+  .field
+    = f.label :weight
+    %br
+      = f.number_field :weight
+  .actions
+    = f.submit
