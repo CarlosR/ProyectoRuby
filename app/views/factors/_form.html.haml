@@ -1,0 +1,15 @@
+= form_for(@factor) do |f|
+  .field
+    = f.label :title
+    %br
+      = f.text_field :title
+  .field
+    = f.label :weight
+    %br
+      = f.number_field :weight
+  .form_row
+    = f.label :Dimention_id, "Dimension"
+    %br
+      = f.collection_select :Dimention_id, Dimention.order(:weight), :id, :title, {}, class: "form_select"
+  .actions
+    = f.submit

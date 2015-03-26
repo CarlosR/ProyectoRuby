@@ -1,2 +1,14 @@
-%h1 Dimentions#show
-%p Find me in app/views/dimentions/show.html.haml
+%h1 Dimension
+%p
+	%strong Titulo:
+	= @dimention.title
+%p
+	%strong Peso:
+	= @dimention.weight
+
+
+
+= render partial: "factors", locals: { factors: @dimention.factors }
+
+= link_to 'Editar', edit_dimention_path
+= link_to 'Atras', dimentions_path

@@ -20,6 +20,7 @@
               = link_to 'Home', root_path
             %li
               %a{:href => ""} Resultados
+
             - if logged_in?
               %li
                 %a{:href => "#"} Administración
@@ -42,6 +43,7 @@
                     %a{:href => "#"} Tecnologías
                   %li
                     %a{:href => "#"} Encuestas
+
                 %li
                   = link_to 'Logout', logout_path, method: :delete
                 %li

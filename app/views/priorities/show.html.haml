@@ -8,7 +8,8 @@
 	= @priority.weight
 
 
+
 = render partial: "dimentions", locals: { dimentions: @priority.dimentions }
 
-
-= link_to 'Back', users_path
+= link_to 'Editar', edit_priority_path
+= link_to 'Atras', priorities_path

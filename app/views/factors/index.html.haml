@@ -1,0 +1,11 @@
+%h2 Factores
+=link_to "Agregar Factor", new_factor_path
+%br
+%br
+- if @factors.any?
+  = render partial: "shared/filter_form", locals: {form_path: factors_path}
+
+  .js_filtered_table
+    = render partial: "table", locals: {factors: @factors}
+- else
+  %em No Hay ningun Factor agregada
