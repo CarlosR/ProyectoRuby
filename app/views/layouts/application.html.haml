@@ -41,12 +41,14 @@
                   %a{:href => "#"} Tecnologías
                 %li
                   %a{:href => "#"} Encuestas
-              %li
-                %a{:href => ""} Mi Perfil
-              %li
-                %a{:href => ""} Login
-              %li
-                %a{:href => "blog.html"} Logout
+              - if !logged_in?
+                %li
+                  = link_to 'Login', login_path
+              - if logged_in?
+                %li
+                  = link_to 'Mi Perfil', user_path(current_user)
+                %li
+                  = link_to 'Logout', logout_path, method: :delete
       #site_content
         #content
           = yield

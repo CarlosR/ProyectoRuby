@@ -41,14 +41,14 @@
                   %a{:href => "#"} Tecnologías
                 %li
                   %a{:href => "#"} Encuestas
-              %li
-                %a{:href => ""} Mi Perfil
               - if !logged_in?
                 %li
-                  %a{:href => "login"} Login
+                  = link_to 'Login', login_path
               - if logged_in?
                 %li
-                  %a{:href => "logout"} Logout
+                  = link_to 'Mi Perfil', user_path(current_user)
+                %li
+                  = link_to 'Logout', logout_path, method: :delete
       #site_content
         #sidebar_container
           .gallery
