@@ -1,0 +1,25 @@
+%center 
+  = form_for(@company) do |f|
+    .field
+      = f.label :name
+      %br
+        = f.text_field :name
+    .field
+      = f.label :address
+      %br
+        = f.text_field :address
+    .field
+      = f.label :city
+      %br
+        = f.text_field :city
+    .field
+      = f.label :phone
+      %br
+      = f.text_field :phone
+      %br
+        = f.number_field :phone
+    %br
+    .actions
+      = f.submit
+
+

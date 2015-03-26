@@ -1,0 +1,4 @@
+%h1 Nueva empresa
+= render partial: "shared/errors", locals: {obj: @company}
+= render 'form'
+= link_to 'Back', root_path
