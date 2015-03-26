@@ -1,14 +1,14 @@
 %h1 Empresas
 %p Listado de empresas
 
-- if @companys.any?
+- if @companies.any?
   %table{border: "1"}
     %tr
       %th Name
       %th Address
       %th City
       %th Phone      
-    = render @companys
+    = render @companies
 - else
   %em No hay ninguna empresa
 
