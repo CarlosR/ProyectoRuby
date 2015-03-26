@@ -17,38 +17,38 @@
         %nav
           %ul#nav.sf-menu
             %li.selected
-              %a{:href => "home"} Home
+              = link_to 'Home', root_path
             %li
               %a{:href => ""} Resultados
-            %li
-              %a{:href => "#"} Administración
-              %ul
-                %li
-                  %a{:href => "users"} Usuarios
-                %li
-                  %a{:href => "companies"} Empresas
-                %li
-                  %a{:href => "#"} Prioridades
-                %li
-                  %a{:href => "#"} Dimensiones
-                %li
-                  %a{:href => "#"} Factores
-                %li
-                  %a{:href => "#"} Tipos AMT
-                %li
-                  %a{:href => "#"} Metodologías
-                %li
-                  %a{:href => "#"} Tecnologías
-                %li
-                  %a{:href => "#"} Encuestas
-              - if !logged_in?
-                %li
-                  = link_to 'Login', login_path
-              - if logged_in?
-                %li
-                  = link_to 'Mi Perfil', user_path(current_user)
-                %li
-                  = link_to 'Logout', logout_path, method: :delete
+            - if logged_in?
+              %li
+                %a{:href => "#"} Administración
+                %ul
+                  %li
+                    %a{:href => "users"} Usuarios
+                  %li
+                    %a{:href => "companies"} Empresas
+                  %li
+                    =link_to 'Prioridades', priorities_path
+                  %li
+                    =link_to 'Dimensiones', dimentions_path
+                  %li
+                    %a{:href => "#"} Factores
+                  %li
+                    %a{:href => "#"} Tipos AMT
+                  %li
+                    %a{:href => "#"} Metodologías
+                  %li
+                    %a{:href => "#"} Tecnologías
+                  %li
+                    %a{:href => "#"} Encuestas
+              %li
+                = link_to 'Logout', logout_path, method: :delete
+              %li
+                = link_to 'Mi Perfil', user_path(current_user)
+            - if logged_in?
+              %li
+                = link_to 'Login', login_path
       #site_content
         #content
           = yield

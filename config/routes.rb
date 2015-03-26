@@ -2,6 +2,8 @@ Proyecto::Application.routes.draw do
 
   resources :users
   resources :companies
+  resources :priorities
+  resources :dimentions
   
   root "welcome#index"
 

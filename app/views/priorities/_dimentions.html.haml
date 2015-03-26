@@ -1,0 +1,19 @@
+- if dimentions.any?
+  %h2 Dimensiones
+
+  %table{border:"1"}
+    %tr
+      %th Prioridad
+      %th Titulo
+      %th Peso
+
+    = render dimentions
+    %tr
+
+  %br
+  %br
+- else
+  %em Aun no tiene Dimensiones
+  %br
+  %br
+  %br

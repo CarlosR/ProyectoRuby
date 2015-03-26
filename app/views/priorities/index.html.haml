@@ -1,0 +1,14 @@
+%h1 Prioridades
+=link_to 'Agregar Prioridad', new_priority_path
+%br
+%br
+- if @priorities.any?
+  %table{border: "1"}
+    %tr
+      %th Titulo
+      %th Peso
+
+      
+    = render @priorities
+- else
+  %em No hay ninguna prioridad creada

@@ -1,0 +1,14 @@
+
+%h1 Prioridad
+%p
+	%strong Titulo:
+	= @priority.title
+%p
+	%strong Peso:
+	= @priority.weight
+
+
+= render partial: "dimentions", locals: { dimentions: @priority.dimentions }
+
+
+= link_to 'Back', users_path
