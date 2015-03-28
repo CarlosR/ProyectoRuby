@@ -8,4 +8,9 @@ class Priority < ActiveRecord::Base
   default_scope order('weight DESC')
   
   accepts_nested_attributes_for :dimentions
+
+  def get_priority(id)
+      @priority = Priority.find(id)
+      @priority.title
+  end
 end

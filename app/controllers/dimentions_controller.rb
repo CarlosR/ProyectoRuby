@@ -37,9 +37,9 @@ class DimentionsController < ApplicationController
   end
 
   def update
-    @dimention = Dimention.new(dimention_params)
+    @dimention = Dimention.find(params[:id])
 
-      if @dimention.save
+      if @dimention.update(dimention_params)
           redirect_to dimentions_path
       else
           render :edit

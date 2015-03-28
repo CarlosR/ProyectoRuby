@@ -6,7 +6,7 @@ class Dimention < ActiveRecord::Base
   accepts_nested_attributes_for :factors
 
   def get_priority(id)
-      @dimention = Dimention.find(id)
-      @dimention.title
-  end
+      @priority = Priority.find(id)
+      @priority.title
+    end
 end
