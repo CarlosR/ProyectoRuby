@@ -10,7 +10,9 @@ Proyecto::Application.routes.draw do
   resources :dimentions do
     get 'delete'  => 'dimentions#destroy', on: :member
   end
-  resources :factors
+  resources :factors do
+    get 'delete'  => 'factors#destroy', on: :member
+  end
   
   
   root "welcome#index"

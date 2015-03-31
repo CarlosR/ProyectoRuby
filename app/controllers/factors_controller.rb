@@ -35,10 +35,25 @@ class FactorsController < ApplicationController
   	end 
   end
 
+  def destroy 
+    @factor = Factor.find(params[:id])
+    @factor.destroy
+    redirect_to factors_path
+
+  end
+
   def edit
+    @factor = Factor.find(params[:id])
   end
 
   def update
+    @factor = Factor.find(params[:id])
+
+      if @factor.update(factor_params)
+          redirect_to factors_path
+      else
+          render :edit
+      end
   end
 
   private

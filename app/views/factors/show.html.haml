@@ -1,2 +1,11 @@
-%h1 Factors#show
-%p Find me in app/views/factors/show.html.haml
+%h1 Factor
+%p
+	%strong Titulo:
+	= @factor.title
+%p
+	%strong Peso:
+	= @factor.weight
+
+= link_to 'Editar', edit_factor_path
+= link_to 'Atras', factors_path
+
